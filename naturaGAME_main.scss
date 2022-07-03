@@ -187,12 +187,12 @@ body {
         }
     }
 
-    .box1 {@include color_render($b1cd, $b1cl)}
-    .box2 {@include color_render($b2cd, $b2cl)}
+    .box1 {@include color_render($b1cd, $b3cl)}
+    .box2 {@include color_render($b2cd, $b4cl)}
     .box3 {@include color_render($b3cd, $b3cl)}
-    .box4 {@include color_render($b4cd, $b4cl)}
-    .box5 {@include color_render($b5cd, $b5cl)}
-    .box6 {@include color_render($b3cd, $b3cl)}
+    .box4 {@include color_render($b1cd, $b4cl)}
+    .box5 {@include color_render($b4cl, $b5cl)}
+    .box6 {@include color_render($b3cd, $b4cl)}
     .box7 {@include color_render($b2cd, $b2cl)}
     .box8 {@include color_render($b1cd, $b1cl)}
 

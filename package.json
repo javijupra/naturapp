@@ -1,0 +1,26 @@
+{
+  "dependencies": {
+    "express": "^4.18.1"
+  },
+  "scripts": {
+    "start": "node server.js",
+    "build": "babel ./naturaGAME_main.js"
+  },
+  "name": "naturapp",
+  "version": "1.0.0",
+  "description": "Juego iNaturalist",
+  "main": "server.js",
+  "devDependencies": {
+    "@babel/cli": "^7.18.6",
+    "@babel/core": "^7.18.6",
+    "node-sass": "npm:sass@^1.53.0"
+  },
+  "keywords": [
+    "app",
+    "game",
+    "nature",
+    "inaturalist"
+  ],
+  "author": "Javier Prado",
+  "license": "ISC"
+}

@@ -41,7 +41,7 @@ body {
 
 .slider {
   display: flex;
-  width: 500%;
+  width: 800%;
   height: 55rem;
   transition: all 0.25s ease-in;
   transform: translateX(0);
@@ -219,7 +219,7 @@ body {
   background-color: #8000FF;
 }
 .slider .box6 {
-  background-color: #000050;
+  background-color: #00501D;
 }
 .slider .box6 .illustration .inner {
   background-color: #00FF44;
@@ -231,28 +231,28 @@ body {
   background-color: #00FF44;
 }
 .slider .box7 {
-  background-color: #300050;
+  background-color: #000050;
 }
 .slider .box7 .illustration .inner {
-  background-color: #000050;
+  background-color: #0033FF;
 }
 .slider .box7 .illustration .inner::after, .slider .box7 .illustration .inner::before {
-  background-color: rgba(0, 0, 80, 0.4);
+  background-color: rgba(0, 51, 255, 0.4);
 }
 .slider .box7 button {
-  background-color: #000050;
+  background-color: #0033FF;
 }
 .slider .box8 {
-  background-color: #00FF44;
+  background-color: #500033;
 }
 .slider .box8 .illustration .inner {
-  background-color: #8000FF;
+  background-color: #FF0077;
 }
 .slider .box8 .illustration .inner::after, .slider .box8 .illustration .inner::before {
-  background-color: rgba(128, 0, 255, 0.4);
+  background-color: rgba(255, 0, 119, 0.4);
 }
 .slider .box8 button {
-  background-color: #8000FF;
+  background-color: #FF0077;
 }
 .slider .illustration {
   grid-column: 2/-1;
@@ -341,7 +341,7 @@ body {
   transform: translateX(-50%);
   width: 60%;
   display: grid;
-  grid-template-columns: repeat(5, 1fr);
+  grid-template-columns: repeat(8, 1fr);
   gap: 1rem;
   text-align: center;
   font-size: 1.5rem;

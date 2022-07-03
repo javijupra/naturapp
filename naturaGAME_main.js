@@ -1,7 +1,8 @@
 // Slider(all Slides in a container)
 const slider = document.querySelector(".slider")
 // All trails 
-const trail = document.querySelector(".trail").querySelectorAll("div")
+// const trail = document.querySelector(".trail").querySelectorAll("div")
+const trail = new Array(8);
 
 // Transform value
 let value = 0
@@ -57,21 +58,21 @@ const slide = (condition) => {
 // function for increase(forward, next) configuration
 const initiateINC = () => {
     // Remove active from all trails
-    trail.forEach(cur => cur.classList.remove("active"))
+    // trail.forEach(cur => cur.classList.remove("active"))
     // increase transform value
-    value === 80 ? value = 0 : value += 20
+    value === 87.5 ? value = 0 : value += 12.5
     // update trailValue based on value
-    trailUpdate()
+    // trailUpdate()
 }
 
 // function for decrease(backward, previous) configuration
 const initiateDEC = () => {
      // Remove active from all trails
-    trail.forEach(cur => cur.classList.remove("active"))
+    // trail.forEach(cur => cur.classList.remove("active"))
     // decrease transform value
-    value === 0 ? value = 80 : value -= 20
+    value === 0 ? value = 87.5 : value -= 12.5
      // update trailValue based on value
-    trailUpdate()
+    // trailUpdate()
 }
 
 // function to transform slide 
@@ -92,19 +93,25 @@ tl.from(".bg", {x: "-100%", opacity: 0})
 const animate = () => tl.restart()
 
 // function to update trailValue based on slide value
-const trailUpdate = () => {
-    if (value === 0) {
-        trailValue = 0
-    } else if (value === 20) {
-        trailValue = 1
-    } else if (value === 40) {
-        trailValue = 2
-    } else if (value === 60) {
-        trailValue = 3
-    } else {
-        trailValue = 4
-    }
-}   
+// const trailUpdate = () => {
+//     if (value === 0) {
+//         trailValue = 0
+//     } else if (value === 12.5) {
+//         trailValue = 1
+//     } else if (value === 25) {
+//         trailValue = 2
+//     } else if (value === 37.5) {
+//         trailValue = 3
+//     } else if (value === 50) {
+//         trailValue = 4
+//     } else if (value === 62.5) {
+//         trailValue = 5
+//     } else if (value === 75) {
+//         trailValue = 6
+//     } else {
+//         trailValue = 7
+//     }
+// }   
 
 // Start interval for slides
 let start = setInterval(() => slide("increase"), interval)
@@ -120,7 +127,7 @@ const clickCheck = (e) => {
     // CLear interval
     clearInterval(start)
     // remove active class from all trails
-    trail.forEach(cur => cur.classList.remove("active"))
+    // trail.forEach(cur => cur.classList.remove("active"))
     // Get selected trail
     const check = e.target
     // add active class
@@ -130,22 +137,22 @@ const clickCheck = (e) => {
     if(check.classList.contains("box1")) {
         value = 0
     } else if (check.classList.contains("box2")) {
-        value = 20
+        value = 12.5
     } else if (check.classList.contains("box3")) {
-        value = 40
+        value = 25
     } else if (check.classList.contains("box4")) {
-        value = 60
+        value = 37.5
     } else if (check.classList.contains("box5")) {
-        value = 80
+        value = 50
     } else if (check.classList.contains("box6")) {
-        value = 100
+        value = 62.5
     } else if (check.classList.contains("box7")) {
-        value = 120
+        value = 75
     } else {
-        value = 140
+        value = 87.5
     }
     // update trail based on value
-    trailUpdate()
+    // trailUpdate()
     // transfrom slide
     move(value, trailValue)
     // start animation
@@ -155,7 +162,7 @@ const clickCheck = (e) => {
 }
 
 // Add function to all trails
-trail.forEach(cur => cur.addEventListener("click", (ev) => clickCheck(ev)))
+// trail.forEach(cur => cur.addEventListener("click", (ev) => clickCheck(ev)))
 
 // Mobile touch Slide Section
 const touchSlide = (() => {

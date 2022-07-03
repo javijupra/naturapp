@@ -65,7 +65,7 @@ body {
 
 .slider {
     display: flex;
-    width: 500%;
+    width: 800%;
     height: 55rem;
     transition: all .25s ease-in;
     // overflow-x: auto;
@@ -192,9 +192,9 @@ body {
     .box3 {@include color_render($b3cd, $b3cl)}
     .box4 {@include color_render($b4cd, $b4cl)}
     .box5 {@include color_render($b5cd, $b5cl)}
-    .box6 {@include color_render($b2cd, $b3cl)}
-    .box7 {@include color_render($b5cd, $b2cd)}
-    .box8 {@include color_render($b3cl, $b5cl)}
+    .box6 {@include color_render($b3cd, $b3cl)}
+    .box7 {@include color_render($b2cd, $b2cl)}
+    .box8 {@include color_render($b1cd, $b1cl)}
 
     .illustration {
         grid-column: 2 / -1;
@@ -277,7 +277,7 @@ body {
     transform: translateX(-50%);
     width: 60%;
     display: grid;
-    grid-template-columns: repeat(5, 1fr);
+    grid-template-columns: repeat(8, 1fr);
     gap: 1rem;
     text-align: center;
     font-size: 1.5rem;

@@ -269,20 +269,15 @@ body {
   }
 }
 .slider .illustration div {
-  height: 25rem;
-  width: 18rem;
+  height: 27rem;
+  width: 27rem;
   border-radius: 3rem;
   background-color: #FF0077;
   position: relative;
   transform: skewX(-10deg);
 }
-@media only screen and (max-width: 800px) {
-  .slider .illustration div {
-    height: 20rem;
-    width: 15rem;
-  }
-}
 .slider .illustration div::after, .slider .illustration div::before {
+  display: none;
   content: "";
   position: absolute;
   height: 100%;

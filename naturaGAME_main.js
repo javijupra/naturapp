@@ -18,23 +18,34 @@ let interval = 4000
 const observations = new Array();
 
 const observation_urls = [
-    "https://api.inaturalist.org/v1/observations/122860889",
+    "https://api.inaturalist.org/v1/observations/59624529",
+    "https://api.inaturalist.org/v1/observations/122860819",
     "https://api.inaturalist.org/v1/observations/122860887",
-    "https://api.inaturalist.org/v1/observations/122850889"
+    "https://api.inaturalist.org/v1/observations/112780889",
+    "https://api.inaturalist.org/v1/observations/122850889",
+    "https://api.inaturalist.org/v1/observations/122760889",
+    "https://api.inaturalist.org/v1/observations/122850829",
+    "https://api.inaturalist.org/v1/observations/122861889",
 ];
 
-observation_urls.forEach( url => {
+observation_urls.forEach( (url, index) => {
     fetch(url)
     .then( response => response.json())
     .then( new_observation_json => {
         observations.push(new_observation_json);
+        createCard(new_observation_json, index + 1);
     });
 });
 
-const createCard = (observation) =>
+const createCard = (observation, card_position) =>
 {
-    const new_html_card = document.getElementById("INat_observation").cloneNode()
-    new_html_card
+    console.log(observation)
+    const card = document.querySelector(".box" + card_position);
+    card.querySelector(".illustration > .inner").style.backgroundImage = "url('" + observation.results[0].community_taxon.default_photo.medium_url + "'";
+    // card.querySelector(".illustration > .inner").insertAdjacentHTML("afterbegin", "<img src='" + observation.results[0].community_taxon.default_photo.medium_url + "'>");
+    card.querySelector(".illustration > .inner").style.backgroundSize = "cover";
+    card.querySelector(".details > h1").innerText = observation.results[0].community_taxon.name;
+    card.querySelector(".details > p").innerText = observation.results[0].place_guess;
 }
 
 //////////////////////////////////////////////////////////////

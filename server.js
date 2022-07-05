@@ -21,3 +21,15 @@ app.get("/main.js", (req, res) => {
 app.get("/main.css.map", (req, res) => {
     res.sendFile(path.join(__dirname, '/main.css.map'));
 });
+
+app.get("/manifest.webmanifest", (req, res) => {
+    res.sendFile(path.join(__dirname, '/manifest.webmanifest'));
+});
+
+app.get("/assets/bioquiz_192.png", (req, res) => {
+    res.sendFile(path.join(__dirname, '/assets/bioquiz_192.png'));
+});
+
+app.get("/assets/bioquiz_500.png", (req, res) => {
+    res.sendFile(path.join(__dirname, '/assets/bioquiz_500.png'));
+});

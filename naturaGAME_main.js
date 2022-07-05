@@ -39,11 +39,16 @@ observation_urls.forEach( (url, index) => {
 
 const createCard = (observation, card_position) =>
 {
-    console.log(observation)
+    // console.log(observation)
     const card = document.querySelector(".box" + card_position);
-    card.querySelector(".illustration > .inner").style.backgroundImage = "url('" + observation.results[0].community_taxon.default_photo.medium_url + "'";
+    // card.querySelector(".illustration > .inner").style.backgroundImage = "url('" + observation.results[0].community_taxon.default_photo.medium_url + "'";
     // card.querySelector(".illustration > .inner").insertAdjacentHTML("afterbegin", "<img src='" + observation.results[0].community_taxon.default_photo.medium_url + "'>");
-    card.querySelector(".illustration > .inner").style.backgroundSize = "cover";
+    const obs_img = document.createElement("img");
+    obs_img.src = observation.results[0].community_taxon.default_photo.medium_url;
+    // obs_img.classList.add("inner");
+    card.querySelector(".illustration > .inner").insertAdjacentElement("afterbegin", obs_img);
+    // card.querySelector(".illustration > .inner").replaceWith(obs_img);
+    // card.querySelector(".illustration > .inner").style.backgroundSize = "cover";
     card.querySelector(".details > h1").innerText = observation.results[0].community_taxon.name;
     card.querySelector(".details > p").innerText = observation.results[0].place_guess;
 }

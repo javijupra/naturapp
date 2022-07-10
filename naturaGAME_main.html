@@ -5,158 +5,90 @@
         <meta http-equiv="X-UA-Compatible" content="ie=edge">
         
         <link rel="manifest" href="/manifest.webmanifest">
-
-        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
-        <link rel="stylesheet" href="main.css">
         
         <title>Slider</title>
+
+        <style>
+            * {
+                box-sizing: border-box;
+                margin: 0;
+                padding: 0;
+            }
+            body {
+                overflow-y: hidden;
+            }
+            .slider {
+                font-family: sans-serif;
+                scroll-snap-type: x mandatory;	
+                display: flex;
+                -webkit-overflow-scrolling: touch;
+                overflow-x: scroll;
+            }
+            section {
+                /* border-right: 1px solid white; */
+                padding: 1rem;
+                min-width: 100vw;
+                height: 100vh;
+                scroll-snap-align: start;
+                scroll-snap-stop: always;
+                text-align: center;
+                position: relative;
+            }
+            h1	{
+                position: absolute;
+                top: 50%;
+                transform: translateY(-50%);
+                text-align: center;
+                color: white;
+                width: 100%;
+                left: 0;
+                font-size: calc(1rem + 3vw);
+            }
+        </style>
+
     </head>
+
     <body>
-        <div class="container"> 
-            <div class="slider">
-                
-                <div class="box1 box">
-                    <div class="bg"></div>
-                    <div class="details">
-                        <h1>Loading...</h1>
-                        <p>
-                            Lorem ipsum dolor sit amet, consectetur adipiscing 
-                            elit. Integer lacinia dui lectus. Donec scelerisque ipsum
-                            diam, ac mattis orci pellentesque eget. 
-                        </p>
-                        <button>Check Now</button>
-                    </div>
+        <div class="slider">
 
-                    <div class="illustration"><div class="inner"></div></div>
-                </div>
-                                               
-                <div class="box2 box">
-                    <div class="bg"></div>
-                    <div class="details">
-                        <h1>Loading...</h1>
-                        <p>
-                            Lorem ipsum dolor sit amet, consectetur adipiscing 
-                            elit. Integer lacinia dui lectus. Donec scelerisque ipsum
-                            diam, ac mattis orci pellentesque eget. 
-                        </p>
-                        <button>Check Now</button>
-                    </div>
+            <section>
+                <h1>Section One</h1>
+            </section>
 
-                    <div class="illustration"><div class="inner"></div></div>
-                </div>
-                                
-                <div class="box3 box">
-                    <div class="bg"></div>
-                    <div class="details">
-                        <h1>Loading...</h1>
-                        <p>
-                            Lorem ipsum dolor sit amet, consectetur adipiscing 
-                            elit. Integer lacinia dui lectus. Donec scelerisque ipsum
-                            diam, ac mattis orci pellentesque eget. 
-                        </p>
-                        <button>Check Now</button>
-                    </div>
+            <section>
+                <h1>Section Two</h1>
+            </section>
 
-                    <div class="illustration"><div class="inner"></div></div>
-                </div>
-                                
-                <div class="box4 box">
-                    <div class="bg"></div>
-                    <div class="details">
-                        <h1>Loading...</h1>
-                        <p>
-                            Lorem ipsum dolor sit amet, consectetur adipiscing 
-                            elit. Integer lacinia dui lectus. Donec scelerisque ipsum
-                            diam, ac mattis orci pellentesque eget. 
-                        </p>
-                        <button>Check Now</button>
-                    </div>
+            <section>
+                <h1>Section Three</h1>
+            </section>
 
-                    <div class="illustration"><div class="inner"></div></div>
-                </div>
-                                
-                <div class="box5 box">
-                    <div class="bg"></div>
-                    <div class="details">
-                        <h1>Loading...</h1>
-                        <p>
-                            Lorem ipsum dolor sit amet, consectetur adipiscing 
-                            elit. Integer lacinia dui lectus. Donec scelerisque ipsum
-                            diam, ac mattis orci pellentesque eget. 
-                        </p>
-                        <button>Check Now</button>
-                    </div>
+            <section>
+                <h1>Section Four</h1>
+            </section>
 
-                    <div class="illustration"><div class="inner"></div></div>
-                </div>
-                                
-                <div class="box6 box">
-                    <div class="bg"></div>
-                    <div class="details">
-                        <h1>Loading...</h1>
-                        <p>
-                            Lorem ipsum dolor sit amet, consectetur adipiscing 
-                            elit. Integer lacinia dui lectus. Donec scelerisque ipsum
-                            diam, ac mattis orci pellentesque eget. 
-                        </p>
-                        <button>Check Now</button>
-                    </div>
+            <section>
+                <h1>Section Five</h1>
+            </section>
 
-                    <div class="illustration"><div class="inner"></div></div>
-                </div>
-                                
-                <div class="box7 box">
-                    <div class="bg"></div>
-                    <div class="details">
-                        <h1>Loading...</h1>
-                        <p>
-                            Lorem ipsum dolor sit amet, consectetur adipiscing 
-                            elit. Integer lacinia dui lectus. Donec scelerisque ipsum
-                            diam, ac mattis orci pellentesque eget. 
-                        </p>
-                        <button>Check Now</button>
-                    </div>
+        </div>
 
-                    <div class="illustration"><div class="inner"></div></div>
-                </div>
-                                
-                <div class="box8 box">
-                    <div class="bg"></div>
-                    <div class="details">
-                        <h1>Loading...</h1>
-                        <p>
-                            Lorem ipsum dolor sit amet, consectetur adipiscing 
-                            elit. Integer lacinia dui lectus. Donec scelerisque ipsum
-                            diam, ac mattis orci pellentesque eget. 
-                        </p>
-                        <button>Check Now</button>
-                    </div>
+        <script>
 
-                    <div class="illustration"><div class="inner"></div></div>
-                </div>
-                                
-            </div>
+            function getRandomColor() {
+                var letters = 'BCDEF'.split('');
+                var color = '#';
+                for (var i = 0; i < 6; i++ ) {
+                    color += letters[Math.floor(Math.random() * letters.length)];
+                }
+                return color;
+            }
+            
+            document.querySelectorAll('section').forEach( section => {
+                section.style.background = getRandomColor();
+            });
 
-            <svg xmlns="http://www.w3.org/2000/svg" class="prev" width="56.898" height="91" viewBox="0 0 56.898 91"><path d="M45.5,0,91,56.9,48.452,24.068,0,56.9Z" transform="translate(0 91) rotate(-90)" fill="#fff"/></svg>
-            <svg xmlns="http://www.w3.org/2000/svg" class="next" width="56.898" height="91" viewBox="0 0 56.898 91"><path d="M45.5,0,91,56.9,48.452,24.068,0,56.9Z" transform="translate(56.898) rotate(90)" fill="#fff"/></svg>
-            <div class="trail">
-                    <div class="box1 active">1</div>
-                    <div class="box2">2</div>
-                    <div class="box3">3</div>
-                    <div class="box4">4</div>
-                    <div class="box5">5</div>
-                    <div class="box6">6</div>
-                    <div class="box7">7</div>
-                    <div class="box8">8</div>
-            </div>
-        </div>   
-        <script src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/16327/gsap-latest-beta.min.js"></script>
-        <script src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/16327/CSSRulePlugin3.min.js"></script>
+        </script>
 
-        <!-- <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
-        <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script> -->
-        
-        <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
-        <script src="main.js" type = "application/javascript"></script>
     </body>
 </html>

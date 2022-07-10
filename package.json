@@ -3,8 +3,7 @@
     "express": "^4.18.1"
   },
   "scripts": {
-    "start": "node server.js",
-    "build": "babel ./naturaGAME_main.js"
+    "start": "node server.js"
   },
   "name": "naturapp",
   "version": "1.0.0",
